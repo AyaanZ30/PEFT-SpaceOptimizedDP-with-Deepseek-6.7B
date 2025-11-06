@@ -64,12 +64,8 @@ void printArray(const vector<char> &arr){
     cout << endl;
 }
 int main(){
-    string s;
-    cout << "Enter string: ";
-    cin >> s;
+    string s = "papdollbob";
 
-    cout << "String : " << s << endl;
-
-    cout << "Min partition cost : " << hyper_optimized_approach(s) - 1 << endl;
+    cout << "Min partition cost : " << (hyper_optimized_approach(s) - 1) << endl;
     return 0;
 }

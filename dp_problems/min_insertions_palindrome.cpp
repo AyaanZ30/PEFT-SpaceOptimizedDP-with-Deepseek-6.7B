@@ -113,13 +113,9 @@ int tabulation_approach(string &s1, string &s2, vector<vector<int>> &dp){
 //     return s1.size() - LPS(s1);         // max-insertions (reversing entire string and appending to og string - longest palindromic subsequence in the string)
 // }
 
-int main(){
-    string s1;
-    cout << "Enter a string: ";
-    cin >> s1;
+int main() {
+    string s1 = "mbadm";  
 
-    cout << s1;
-    // cout << "\nLongest palindromic subsequence :" << LPS(s1) << endl;
-    cout << "\nMinimum insertions needed : " << hyper_optimized_approach(s1) << endl;
+    cout << "Minimum insertions needed : " << hyper_optimized_approach(s1) << endl;
     return 0;
 }

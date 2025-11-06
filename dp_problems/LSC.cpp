@@ -55,17 +55,9 @@ int hyper_optimized_approach(vector<string> &arr){
 }
 
 
-int main(){
-    int n;
-    cout << "Enter vector size: ";
-    cin >> n;
-    vector<string> arr(n);
+int main() {
+    vector<string> arr = {"abc", "def", "ghi", "ab", "cdef", "gh"}; 
 
-    for(int i = 0 ; i < n ; i++){
-        cout << "Element " << i + 1 << " : ";
-        cin >> arr[i];
-    }
-
-    cout << "Length of LSC  : " << hyper_optimized_approach(arr) << endl;
+    cout << "Length of LSC : " << hyper_optimized_approach(arr) << endl;
     return 0;
 }

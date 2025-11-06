@@ -31,18 +31,8 @@ int hyper_optimized_approach(const vector<int> &arr){
     return len;               // length of LIS is size of temp vector
 }
 
-int main(){
-    int n;
-    cout << "Enter number of elements: ";
-    cin >> n;
-    vector<int> arr(n);
-
-    for(int i = 0 ; i < n ; i++){
-        cout << "Element " << i + 1 << " : ";
-        cin >> arr[i];
-    }
-
-    vector<vector<int>> dp(n, vector<int>(n + 1, -1));
+int main() {
+    vector<int> arr = {10, 9, 2, 5, 3, 7, 101, 18};
 
     cout << "Length of LIS : " << hyper_optimized_approach(arr) << endl;
     return 0;

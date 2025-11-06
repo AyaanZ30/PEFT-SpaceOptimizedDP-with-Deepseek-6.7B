@@ -115,6 +115,6 @@ int main(){
     string s1 = "racecar";
     string s2 = "raltcar";
 
-    cout << "Length of LCS between " << s1 << " and " << s2 << " is: " << hyper_optimized_approach(s1, s2) << endl;
+    cout << "Length of LCS  :"  << hyper_optimized_approach(s1, s2) << endl;
     return 0;
 }

@@ -53,21 +53,14 @@ void printArray(const vector<int> &arr){
     }
     cout << endl;
 }
-int main(){
-    int n;
-    cout << "Enter number of elements: ";
-    cin >> n;
-    vector<int> arr(n);
-
-    cout << "Enter the MCM dimension vector :" << endl;
-    for(int i = 0 ; i < n ; i++){
-        cout << "Dimension " << i + 1 << " : ";
-        cin >> arr[i];
-    }
+int main() {
+    vector<int> arr = {10, 30, 5, 60};  
+    int n = arr.size();
 
     cout << "Min number of operations : " << hyper_optimized_approach(arr, n) << endl;
     return 0;
 }
+
 
 
 

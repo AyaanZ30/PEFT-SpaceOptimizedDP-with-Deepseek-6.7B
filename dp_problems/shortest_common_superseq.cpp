@@ -112,13 +112,9 @@ int tabulation_approach(string &s1, string &s2, vector<vector<int>> &dp){
     return dp[s1.size()][s2.size()];
 }
 
-int main(){
-    string s1, s2;
-    cout << "s1 : ";
-    cin >> s1;
-
-    cout << "s2 : ";
-    cin >> s2;
+int main() {
+    string s1 = "brute";
+    string s2 = "groot";
 
     int n = s1.size();
     int m = s2.size();

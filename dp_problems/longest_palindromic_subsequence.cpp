@@ -119,11 +119,8 @@ int LPS(string &s1){
     // return hyper_optimized_approach(s1);   // string reversed in the function itself
 }
 int main(){
-    string s1;
-    cout << "Enter a string: ";
-    cin >> s1;
-
-    cout << s1;
+    string s1 = "racecar";
+    
     cout << "\nLongest palindromic subsequence :" << hyper_optimized_approach(s1) << endl;
     return 0;
 }

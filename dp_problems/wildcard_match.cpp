@@ -111,13 +111,11 @@ bool hyper_optimized_approach(string &s1, string &s2){    // convert s1 -> s2
 
 int main(){
     string s1 = "a*b", s2 = "ab";
-    cout << "Ground rules : " << endl;
-    cout << "? -> Matches with a single character (a-z)" << endl;
-    cout << "* -> Matches with a seq of length >= 0" << endl;
-
-    cout << "s1 : " << s1 << endl;
-    cout << "s2 : " << s2 << endl;
 
     cout << "\nMatching ? : " << hyper_optimized_approach(s1, s2) << endl;
     return 0;
 }
+
+// cout << "Ground rules : " << endl;
+// cout << "? -> Matches with a single character (a-z)" << endl;
+// cout << "* -> Matches with a seq of length >= 0" << endl;

@@ -67,8 +67,7 @@ int main() {
     int amount = 11;
     int n = coins.size();
 
-    cout << "Minimum coins needed : " 
-         << hyper_optimized_approach(n, amount, coins) << endl;
+    cout << "Minimum coins needed : " << hyper_optimized_approach(n, amount, coins) << endl;
 
     return 0;
 }

@@ -46,17 +46,9 @@ void printArray(const vector<int> &arr){
     }
     cout << endl;
 }
-int main(){
-    int n;
-    cout << "Enter number of elements: ";
-    cin >> n;
-    vector<int> arr(n);
+int main() {
+    vector<int> arr = {1, 3, 5, 4, 7};   
 
-    for(int i = 0 ; i < n ; i++){
-        cout << "Element " << i + 1 << " : ";
-        cin >> arr[i];
-    }
-
-    cout << "Number of distinct LIS's possible : " << hyper_optimized_approach(arr) << endl;
+    cout << "N LIS : " << hyper_optimized_approach(arr) << endl;
     return 0;
 }

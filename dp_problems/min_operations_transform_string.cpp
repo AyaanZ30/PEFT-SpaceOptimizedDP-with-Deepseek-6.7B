@@ -111,15 +111,12 @@ int tabulation_approach(string &s1, string &s2, vector<vector<int>> &dp){
 // }
 
 int main(){
-    string s1, s2;
-    cout << "Source string : ";
-    cin >> s1;
-
-    cout << "Target string : ";
-    cin >> s2;
+    string s1 = "hot";
+    string s2 = "how";
 
     int n = s1.size();
     int m = s2.size();
-    cout << "\n" << s1 << " ----> " << s2 << "(" << hyper_optimized_approach(s1, s2, n, m) << " operations)"<< endl;
+    
+    cout << hyper_optimized_approach(s1, s2, n, m) << endl;
     return 0;
 }

@@ -53,26 +53,14 @@ void printArray(const vector<int> &arr){
     }
     cout << endl;
 }
-int main(){
-    int n, l;
-    cout << "Enter number of elements: ";
-    cin >> n;
-    cout << "Enter length of the stick: ";
-    cin >> l;
-    vector<int> arr(n);
+int main() {
+    int l = 9;  
+    vector<int> arr = {5, 6, 1, 4, 2}; 
 
-    cout << "Enter the cutting positions :" << endl;
-    for(int i = 0 ; i < n ; i++){
-        cout << "Pos " << i + 1 << " : ";
-        cin >> arr[i];
-    }
-
-    // adding the two ends of the stick to the cuts array
     arr.push_back(l);
-    arr.insert(arr.begin(), 0); // adding the two ends of the stick
+    arr.insert(arr.begin(), 0);
     sort(arr.begin(), arr.end());
     
-
     cout << "Min cost to cut the stick : " << hyper_optimized_approach(arr) << endl;
     return 0;
 }

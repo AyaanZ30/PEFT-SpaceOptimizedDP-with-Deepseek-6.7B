@@ -61,20 +61,6 @@ int hyper_optimized_approach(int n, vector<int>& arr) {
     return min_diff;
 }
 
-
-// Function to find the minimum difference
-int minSubsetSumDifference(vector<int>& arr) {
-    int n = arr.size();
-    // return hyper_optimized_approach(n, arr);
-    
-    // Wrapper for naive approach
-    int total_sum = 0;
-    for(int x : arr) total_sum += x;
-    int min_diff = 1e9;
-    recursion_approach(n - 1, 0, total_sum, arr, min_diff);
-    return min_diff;
-}
-
 // PROMPT: You are given an array of positive integers. Write a space-optimized dynamic programming solution to find the minimum possible absolute difference between the sums of two subsets formed from this array.
 int main() {
     vector<int> arr = {1, 6, 11, 5};

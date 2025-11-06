@@ -55,19 +55,11 @@ int hyper_optimized_approach(int k, const vector<int> &arr){
     return dp[0];
 }
 
-int main(){
-    int n, k;
-    cout << "Enter number of elements : ";
-    cin >> n;
-    cout << "Enter max partition size : ";
-    cin >> k;
-
-    vector<int> arr(n);
-    cout << "Enter elements : ";
-    for(int i = 0 ; i < n ; i++){
-        cin >> arr[i];
-    }
-
+int main() {
+    int n = 7;                      
+    int k = 3;                      
+    vector<int> arr = {1, 15, 7, 9, 2, 5, 10};   
+    
     cout << "Max sum : " << hyper_optimized_approach(k, arr) << endl;
     return 0;
 }

@@ -76,7 +76,7 @@ int main() {
     int maxWeight = 25;
     int n = weights.size();
 
-    cout << "Max value in Unbounded Knapsack : " << hyper_optimized_approach(n, maxWeight, weights, values) << endl;
+    cout << "Max value : " << hyper_optimized_approach(n, maxWeight, weights, values) << endl;
 
     return 0;
 }

@@ -11,7 +11,7 @@ using namespace std;
 // OPTIMIZED 
 // @explanation: Space-optimized 1D DP 
 // @complexity: Time: O(N) , Space:  O(1)
-int hyper_optimized_approach(const vector<int> &prices){    // convert s1 -> s2 
+int hyper_optimized_approach(vector<int> &prices){    // convert s1 -> s2 
     int maxProfit = 0;
     int mini = prices[0];
 

@@ -11,7 +11,7 @@ using namespace std;
 // OPTIMIZED (using Binary Search concept)
 // @explanation: Space-optimized 1D (replicating fake LIS space as only goal is to get length of LIS) 
 // @complexity: Time: O(n * log(n)) , Space:  O(n)
-int hyper_optimized_approach(const vector<int> &arr){
+int hyper_optimized_approach(vector<int> &arr){
     vector<int> temp;
     temp.push_back(arr[0]);
     int len = 1;

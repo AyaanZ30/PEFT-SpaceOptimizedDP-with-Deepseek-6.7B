@@ -35,7 +35,7 @@ int recursion_approach(int i, const string &s){    // front partitioning
 // OPTIMIZED
 // @explanation: Space-optimized 1D DP 
 // (BOTTOM-UP approach) (TC : O(n^2 * m), SC : O(n))
-int hyper_optimized_approach(const string &s){
+int hyper_optimized_approach(string &s){
     int n = s.size();
     vector<int> dp(n+1, 0);
 

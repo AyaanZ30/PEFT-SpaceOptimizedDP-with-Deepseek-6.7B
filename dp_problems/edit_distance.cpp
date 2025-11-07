@@ -64,7 +64,6 @@ int hyper_optimized_approach(string &s1, string &s2){    // convert s1 -> s2
     int m = s2.size();
     vector<int> prev(m+1, 0), curr(m+1, 0);
 
-    // initial fillings (analogous to tabulation case)
     for(int j = 0 ; j <= m ; j++){
         prev[j] = j;
     }

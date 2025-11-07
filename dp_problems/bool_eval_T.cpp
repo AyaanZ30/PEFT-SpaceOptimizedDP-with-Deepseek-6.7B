@@ -42,7 +42,7 @@ int recursion_approach(int i, int j, int isTrue, const vector<char> &arr){
 // OPTIMIZED
 // @explanation: Space-optimized 3D DP 
 // (BOTTOM-UP approach)
-int hyper_optimized_approach(const vector<char> &arr){
+int hyper_optimized_approach(vector<char> &arr){
     int n = arr.size();
     vector<vector<vector<int>>> dp(n, vector<vector<int>>(n, vector<int>(2, 0)));
 

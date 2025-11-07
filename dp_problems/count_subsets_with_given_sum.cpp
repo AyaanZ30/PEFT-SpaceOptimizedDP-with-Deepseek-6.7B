@@ -30,7 +30,7 @@ int recursion_approach(int idx, int target, vector<int>& arr) {
 // OPTIMIZED
 // @explanation: Space-optimized DP using a single 1D integer array (prev) to store the counts of subsets for each possible sum.
 // @complexity: Time: O(n * target), Space: O(target).
-int hyper_optimized_approach(int n, int k, vector<int>& arr) {
+int hyper_optimized_approach(vector<int>& arr, int n, int k) {
     // prev[i] will store the count of subsets with sum 'i'.
     vector<int> prev(k + 1, 0);
 
@@ -63,7 +63,7 @@ int main() {
     int target = 6;
     int n = arr.size();
 
-    cout << "Number of subsets" << hyper_optimized_approach(n, target, arr) << endl;
+    cout << "Number of subsets" << hyper_optimized_approach(arr, n, target) << endl;
     return 0;
 }
 

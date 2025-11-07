@@ -32,7 +32,8 @@ int recursion_approach(int idx, int N, vector<int>& prices) {
 // OPTIMIZED
 // @explanation: Space-optimized DP using a single 1D array. It iterates through pieces and rod lengths to find the maximum price, equivalent to Unbounded Knapsack.
 // @complexity: Time: O(N * N), Space: O(N).
-int hyper_optimized_approach(int n, vector<int>& prices) {
+int hyper_optimized_approach(vector<int>& prices) {
+    int n = prices.size();
     vector<int> prev(n + 1, 0);
 
     // Base case: maximum price for a rod of length 'i' using only pieces of length 1.
@@ -59,9 +60,7 @@ int hyper_optimized_approach(int n, vector<int>& prices) {
 // PROMPT: You are given a rod of length n and an array where each element represents the price of a rod piece of that length (from 1 to n). Formulate a space-optimized dynamic programming solution to determine the maximum profit obtainable by cutting the rod into smaller pieces and selling them. You can make unlimited cuts of any available length.
 int main() {
     vector<int> prices = {1, 5, 8, 9, 10, 17, 17, 20}; // prices for lengths 1 to 8
-    int n = prices.size();
-
-    cout << "Max profit : " << hyper_optimized_approach(n, prices) << endl;
+    cout << "Max profit : " << hyper_optimized_approach(prices) << endl;
     return 0;
 }
 

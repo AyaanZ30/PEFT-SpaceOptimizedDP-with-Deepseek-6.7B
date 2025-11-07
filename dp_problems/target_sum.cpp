@@ -26,7 +26,8 @@ int recursion_approach(int idx, int current_sum, int target, vector<int>& nums) 
 // OPTIMIZED
 // @explanation: This problem is transformed into 'Count Subsets with Given Sum'. We find the number of subsets that sum to (total_sum + target) / 2. This is solved with a 1D DP array.
 // @complexity: Time: O(n * sum), Space: O(sum).
-int hyper_optimized_approach(int n, int target, vector<int>& nums) {
+int hyper_optimized_approach(vector<int>& nums, int target) {
+    int n = nums.size();
     int total_sum = 0;
     for(int x : nums) total_sum += x;
 
@@ -57,9 +58,7 @@ int hyper_optimized_approach(int n, int target, vector<int>& nums) {
 int main() {
     vector<int> nums = {1, 1, 1, 1, 1};
     int target = 3;
-    int n = nums.size();
-
-    cout << "Number of ways to get target sum : "  << hyper_optimized_approach(n, target, nums) << endl;
+    cout << "Number of ways to get target sum : "  << hyper_optimized_approach(nums, target) << endl;
 
     return 0;
 }

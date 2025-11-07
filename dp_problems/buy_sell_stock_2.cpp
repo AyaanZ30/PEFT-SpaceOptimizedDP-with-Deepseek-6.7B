@@ -49,7 +49,7 @@ int tabulation_approach(const vector<int> &prices){
 // OPTIMIZED 
 // @explanation: Space-optimized 1D DP 
 // @complexity: Time: O(N) , Space:  O(1)
-int hyper_optimized_approach(const vector<int> &prices){    // convert s1 -> s2 
+int hyper_optimized_approach(vector<int> &prices){    // convert s1 -> s2 
     int n = prices.size();
     vector<int> ahead(2, 0), curr(2, 0); // since for computing current state (idx) we only ahead values (idx+1) (refer tabulation logic)
 

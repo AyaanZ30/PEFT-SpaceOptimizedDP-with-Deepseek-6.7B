@@ -73,7 +73,7 @@ int tabulation_approach(const vector<int> &prices, int capacity){
 // OPTIMIZED 
 // @explanation: Space-optimized (3D -> 2D)  
 // @complexity: Time: O(N*2*3) , Space:  O(const)
-int hyper_optimized_approach(const vector<int> &prices, int capacity){    // convert s1 -> s2 
+int hyper_optimized_approach(vector<int> &prices, int capacity){    // convert s1 -> s2 
     int n = prices.size();
     int buy_options = 2;      
 

@@ -32,7 +32,7 @@ int recursion_approach(int idx, int amount, vector<int>& coins) {
 // OPTIMIZED
 // @explanation: Space-optimized DP using a single 1D array. prev[i] stores the minimum coins needed for amount 'i'.
 // @complexity: Time: O(n * amount), Space: O(amount).
-int hyper_optimized_approach(int n, int amount, vector<int>& coins) {
+int hyper_optimized_approach(vector<int>& coins, int n, int amount) {
     vector<int> prev(amount + 1, 1e9);
 
     // Base case: 0 coins are needed for amount 0.
@@ -67,7 +67,7 @@ int main() {
     int amount = 11;
     int n = coins.size();
 
-    cout << "Minimum coins needed : " << hyper_optimized_approach(n, amount, coins) << endl;
+    cout << "Minimum coins needed : " << hyper_optimized_approach(coins, n, amount) << endl;
 
     return 0;
 }

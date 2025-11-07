@@ -23,8 +23,9 @@ bool recursion_approach(int idx, int target, vector<int> &arr) {
 // OPTIMIZED
 // @explanation: Space-optimized 1D DP (sum check for k = total_sum/2)
 // @complexity: Time: O(n * sum), Space: O(sum).
-bool hyper_optimized_approach(int n, vector<int> &arr) {
+bool hyper_optimized_approach(vector<int> &arr) {
     int total_sum = 0;
+    int n = arr.size();
     for (int x : arr) {
         total_sum += x;
     }
@@ -47,22 +48,20 @@ bool hyper_optimized_approach(int n, vector<int> &arr) {
     return prev[k];
 }
 
-bool canPartition(vector<int>& arr) {
-    int n = arr.size();
-    int total_sum = 0;
-    for(int x : arr) total_sum += x;
-    if(total_sum % 2) return false;
+// bool canPartition(vector<int>& arr) {
+//     int n = arr.size();
+//     int total_sum = 0;
+//     for(int x : arr) total_sum += x;
+//     if(total_sum % 2) return false;
 
-    // return recursion_approach(n - 1, total_sum / 2, arr);
-    return hyper_optimized_approach(n, arr);
-}
+//     // return recursion_approach(n - 1, total_sum / 2, arr);
+//     return hyper_optimized_approach(n, arr);
+// }
 
 // PROMPT: You are given an array of positive integers. Implement a space-optimized dynamic programming approach to determine whether the array can be partitioned into two subsets such that the sum of elements in both subsets is equal.
 int main() {
-    vector<int> arr = {10, 20, 15, 5, 25, 30};
-    int n = arr.size();
-    
-    cout << hyper_optimized_approach(n, arr);
+    vector<int> arr = {10, 20, 15, 5, 25, 30};    
+    cout << hyper_optimized_approach(arr);
 
     return 0;
 }

@@ -28,8 +28,9 @@ void recursion_approach(int idx, int current_sum, int total_sum, vector<int> &ar
 // OPTIMIZED
 // @explanation: Space-optimized 1D-DP. 
 // @complexity: Time: O(n * sum), Space: O(sum).
-int hyper_optimized_approach(int n, vector<int>& arr) {
+int hyper_optimized_approach(vector<int>& arr) {
     int total_sum = 0;
+    int n = arr.size();
     for (int x : arr) {
         total_sum += x;
     }
@@ -63,10 +64,8 @@ int hyper_optimized_approach(int n, vector<int>& arr) {
 
 // PROMPT: You are given an array of positive integers. Write a space-optimized dynamic programming solution to find the minimum possible absolute difference between the sums of two subsets formed from this array.
 int main() {
-    vector<int> arr = {1, 6, 11, 5};
-    int n = arr.size();
-    
-    cout << "Minimum subset sum difference (Optimized): " << hyper_optimized_approach(n, arr) << endl;
+    vector<int> arr = {1, 6, 11, 5};    
+    cout << "Minimum subset sum difference (Optimized): " << hyper_optimized_approach(arr) << endl;
 
     return 0;
 }

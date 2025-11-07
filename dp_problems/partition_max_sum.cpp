@@ -34,7 +34,7 @@ int recursion_approach(int i, int k, const vector<int> &arr){    // front partit
 // OPTIMIZED
 // @explanation: Space-optimized 1D DP 
 // (BOTTOM-UP approach) (TC : O(n*k), SC : O(n))
-int hyper_optimized_approach(int k, const vector<int> &arr){
+int hyper_optimized_approach(vector<int> &arr, int k){
     int n = arr.size();
     vector<int> dp(n + 1, 0);  // dp[i] -> max sum for subarray arr[0...i-1]
 
@@ -60,6 +60,6 @@ int main() {
     int k = 3;                      
     vector<int> arr = {1, 15, 7, 9, 2, 5, 10};   
     
-    cout << "Max sum : " << hyper_optimized_approach(k, arr) << endl;
+    cout << "Max sum : " << hyper_optimized_approach(arr, k) << endl;
     return 0;
 }

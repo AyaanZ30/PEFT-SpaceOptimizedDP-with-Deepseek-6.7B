@@ -48,7 +48,7 @@ int tabulation_approach(const vector<int> &prices, int fee){
 // OPTIMIZED 
 // @explanation: Space-optimized 2D DP 
 // @complexity: Time: O(N) , Space:  O(N*2)
-int hyper_optimized_approach(const vector<int> &prices, int fee){    // convert s1 -> s2 
+int hyper_optimized_approach(vector<int> &prices, int fee){    // convert s1 -> s2 
     int n = prices.size();
     vector<vector<int>> dp(n+2, vector<int>(2, 0));
 

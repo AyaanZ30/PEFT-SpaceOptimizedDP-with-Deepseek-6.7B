@@ -26,7 +26,8 @@ int recursion_approach(int idx, int target, vector<int> &arr){
 // OPTIMIZED
 // @explanation: Space-optimized 1D DP 
 // @complexity: Time: O(n * target), Space: O(target).
-int hyper_optimized_approach(int n, int target, vector<int> &arr){
+int hyper_optimized_approach(vector<int> &arr, int target){
+    int n = arr.size();
     vector<bool> prev(target + 1, false);
     
     // base cases
@@ -68,9 +69,8 @@ bool tabulation_approach(int n, int target, vector<int> &arr){
 int main() {
     vector<int> arr = {3, 34, 4, 12, 5, 2};
     int target = 9;
-    int n = arr.size();
 
-    cout << (hyper_optimized_approach(n, target, arr) ? "Yes" : "No") << endl;
+    cout << (hyper_optimized_approach(arr, target) ? "Yes" : "No") << endl;
 
     return 0;
 }

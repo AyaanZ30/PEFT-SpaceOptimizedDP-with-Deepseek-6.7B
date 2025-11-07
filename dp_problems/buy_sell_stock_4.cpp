@@ -42,7 +42,7 @@ int tabulation_approach(const vector<int> &prices, int k){
 // OPTIMIZED 
 // @explanation: Space-optimized (2D -> 1D)  
 // @complexity: Time: O(N*2*k) , Space:  O(4k + 2)
-int hyper_optimized_approach(const vector<int> &prices, int k){    // convert s1 -> s2 
+int hyper_optimized_approach(vector<int> &prices, int k){    // convert s1 -> s2 
     int n = prices.size();      
     vector<int> after(2*k + 1, 0);
     vector<int> curr(2*k + 1, 0);

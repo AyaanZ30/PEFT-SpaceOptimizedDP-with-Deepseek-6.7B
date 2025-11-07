@@ -26,7 +26,7 @@ int recursion_approach(int i, int j, vector<int> &cuts){
 // OPTIMIZED
 // @explanation: Space-optimized 2D DP 
 // (BOTTOM-UP approach) (TC : O(n^3), SC : O(n^2))
-int hyper_optimized_approach(const vector<int> &cuts){
+int hyper_optimized_approach(vector<int> &cuts){
     int n = cuts.size();
     vector<vector<int>> dp(n+2 ,vector<int>(n+2, 0));
 

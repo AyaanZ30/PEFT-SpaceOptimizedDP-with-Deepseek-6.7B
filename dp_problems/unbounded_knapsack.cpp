@@ -24,7 +24,8 @@ int recursion_approach(int idx, int maxWeight, vector<int> &weights, vector<int>
 // OPTIMIZED
 // @explanation: Space-optimized 1D-DP using a single 1D array. The inner loop runs forwards, allowing an item to contribute to the knapsack value multiple times in the same pass.
 // @complexity: Time: O(n * maxWeight), Space: O(maxWeight).
-int hyper_optimized_approach(int n, int maxWeight, vector<int> &weights, vector<int> &values){
+int hyper_optimized_approach(vector<int> &weights, vector<int> &values, int maxWeight){
+    int n = weights.size();
     vector<int> prev(maxWeight + 1, 0);
     for(int w = 0 ; w <= maxWeight ; w++){
         prev[w] = (int(w / weights[0]) * values[0]);
@@ -47,7 +48,8 @@ int hyper_optimized_approach(int n, int maxWeight, vector<int> &weights, vector<
     return prev[maxWeight];
 }
 
-int space_optimized_approach(int n, int maxWeight, vector<int> &weights, vector<int> &values) {
+int space_optimized_approach(int maxWeight, vector<int> &weights, vector<int> &values) {
+    int n = weights.size();
     vector<int> prev(maxWeight + 1, 0), curr(maxWeight + 1, 0);
     for(int w = 0 ; w <= maxWeight ; w++){
         prev[w] = (int(w / weights[0]) * values[0]);
@@ -74,9 +76,8 @@ int main() {
     vector<int> weights = {5, 7, 9, 11};
     vector<int> values  = {10, 13, 18, 20};
     int maxWeight = 25;
-    int n = weights.size();
 
-    cout << "Max value : " << hyper_optimized_approach(n, maxWeight, weights, values) << endl;
+    cout << "Max value : " << hyper_optimized_approach(weights, values, maxWeight) << endl;
 
     return 0;
 }

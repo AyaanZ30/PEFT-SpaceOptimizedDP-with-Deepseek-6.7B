@@ -24,7 +24,7 @@ int recursion_approach(int i, int prev, const vector<int> &arr){
 // OPTIMIZED
 // @explanation: Space-optimized 1D DP 
 // @complexity: Time: O(n^2) , Space:  O(n)
-int hyper_optimized_approach(const vector<int> &arr){
+int hyper_optimized_approach(vector<int> &arr){
     int n = arr.size();
     vector<int> dp(n, 1);
     int maxi = 1;

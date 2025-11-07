@@ -23,6 +23,7 @@ int hyper_optimized_approach(vector<int> &prices){    // convert s1 -> s2
     return maxProfit;
 }
 
+// PROMPT: Given an array where each element represents the stock price on a given day, implement a space-optimized dynamic programming approach to find the maximum profit you can achieve from a single buy and a single sell operation.
 int main(){
     int n = 6;
     vector<int> stocks = {7,1,5,3,6,4};

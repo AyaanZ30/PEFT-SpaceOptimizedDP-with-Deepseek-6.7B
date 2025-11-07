@@ -55,6 +55,7 @@ int hyper_optimized_approach(vector<int> &arr, int k){
     return dp[0];
 }
 
+// PROMPT: Given an integer array arr and an integer k, implement a space-optimized dynamic programming approach to partition the array into contiguous subarrays of length at most k. After partitioning, each subarray's elements are replaced with its maximum value. Return the maximum sum possible after partitioning.
 int main() {
     int n = 7;                      
     int k = 3;                      

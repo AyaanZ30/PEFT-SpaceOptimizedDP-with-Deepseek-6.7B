@@ -53,6 +53,8 @@ void printArray(const vector<int> &arr){
     }
     cout << endl;
 }
+
+// PROMPT: Given an array of size n representing matrix dimensions, where the ith matrix has dimensions arr[i-1] x arr[i], implement a space-optimized dynamic programming approach to find the minimum number of scalar multiplications needed to multiply the matrices.
 int main() {
     vector<int> arr = {10, 30, 5, 60};  
     int n = arr.size();

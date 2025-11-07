@@ -81,6 +81,7 @@ int hyper_optimized_approach(string &s1, string &s2){    // convert s1 -> s2
     return prev[m];
 }
 
+// PROMPT: Given two strings s1 and s2, implement a space-optimized dynamic programming approach to find the minimum number of operations required to convert s1 into s2. The allowed operations are insertion, deletion, and substitution of characters.
 int main(){
     string s1 = "gross";
     string s2 = "grease";

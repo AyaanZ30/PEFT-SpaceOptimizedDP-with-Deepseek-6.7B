@@ -109,6 +109,7 @@ bool hyper_optimized_approach(string &s1, string &s2){    // convert s1 -> s2
     return prev[m];
 }
 
+// PROMPT: Given two strings s1 and s2, where s1 may contain wildcard characters '?' and '', implement a space-optimized dynamic programming approach to check if s1 matches s2. The '?' character matches exactly one character, and '' matches any sequence of characters (including the empty sequence).
 int main(){
     string s1 = "a*b", s2 = "ab";
 

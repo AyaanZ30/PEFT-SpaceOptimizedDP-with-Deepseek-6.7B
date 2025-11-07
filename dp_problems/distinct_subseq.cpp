@@ -91,6 +91,7 @@ int hyper_optimized_approach(string &s1, string &s2){    // convert s1 -> s2
     }return prev[m];
 }
 
+// PROMPT: Given two strings s and t, implement a space-optimized dynamic programming approach to count how many distinct subsequences of s are equal to t.
 int main(){
     string s1 = "abcababbcabcbab";
     string s2 = "abc";

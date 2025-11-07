@@ -111,6 +111,7 @@ int tabulation_approach(string &s1, string &s2, vector<vector<int>> &dp){
     return dp[s1.size()][s2.size()];
 }
 
+// PROMPT: Given two strings s1 and s2, implement a space-optimized dynamic programming approach to find the length of their longest common subsequence.
 int main(){
     string s1 = "racecar";
     string s2 = "raltcar";

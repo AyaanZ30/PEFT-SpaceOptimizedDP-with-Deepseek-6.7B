@@ -31,6 +31,7 @@ int hyper_optimized_approach(vector<int> &arr){
     return len;               // length of LIS is size of temp vector
 }
 
+// PROMPT: Given an integer array arr, implement a space-optimized approach using binary search to find the length of the longest strictly increasing subsequence in O(n log n) time.
 int main() {
     vector<int> arr = {10, 9, 2, 5, 3, 7, 101, 18};
 

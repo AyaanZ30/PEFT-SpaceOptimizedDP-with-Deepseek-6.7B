@@ -113,6 +113,7 @@ int tabulation_approach(string &s1, string &s2, vector<vector<int>> &dp){
 //     return s1.size() - LPS(s1);         // max-insertions (reversing entire string and appending to og string - longest palindromic subsequence in the string)
 // }
 
+// PROMPT: Given a string s, implement a space-optimized dynamic programming approach to find the minimum number of insertions required to make the string a palindrome.
 int main() {
     string s1 = "mbadm";  
 

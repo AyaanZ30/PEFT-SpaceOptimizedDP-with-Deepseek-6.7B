@@ -52,6 +52,8 @@ void printArray(const vector<int> &arr){
     }
     cout << endl;
 }
+
+// PROMPT: Given an array of balloons with numbers written on them, implement a space-optimized dynamic programming approach to find the maximum coins obtainable by bursting all balloons. When a balloon i is burst, you get nums[i-1] * nums[i] * nums[i+1] coins, and the balloons i-1 and i+1 become adjacent.
 int main(){
     int n = 4;
     vector<int> arr = {3,1,5,8};

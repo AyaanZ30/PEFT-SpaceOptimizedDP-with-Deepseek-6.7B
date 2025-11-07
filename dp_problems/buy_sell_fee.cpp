@@ -62,6 +62,7 @@ int hyper_optimized_approach(vector<int> &prices, int fee){    // convert s1 -> 
     return dp[0][1];
 }
 
+// PROMPT:  Given an array of stock prices and a transaction fee that must be paid for each buy-sell operation, implement a space-optimized dynamic programming approach to find the maximum profit achievable from multiple transactions. Each transaction incurs the given fee.
 int main(){
     int n = 5, trans_fee = 2;
     vector<int> stocks = {1,3,2,8,4,9};

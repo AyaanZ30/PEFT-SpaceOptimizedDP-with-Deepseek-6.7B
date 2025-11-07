@@ -100,6 +100,7 @@ int hyper_optimized_approach(vector<int> &prices, int capacity){    // convert s
     return after[1][2];
 }
 
+// PROMPT: You may complete at most 2 transactions. Implement a space-optimized dynamic programming approach to maximize the profit achievable from at most 2 buy-sell operations.
 int main(){
     int n = 6;
     int transaction_cap = 2;

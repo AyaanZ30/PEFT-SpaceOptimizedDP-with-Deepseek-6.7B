@@ -84,6 +84,8 @@ void printArray(const vector<int> &arr){
     }
     cout << endl;
 }
+
+// PROMPT: Given an array of distinct positive integers, implement a space-optimized dynamic programming approach to find the largest subset such that for every pair (i, j) in the subset, either arr[i] divides arr[j] or arr[j] divides arr[i]. Return the size of this subset.
 int main(){
     vector<int> arr = {10, 9, 2, 5, 3, 7, 101, 18}; 
     cout << "Length of LIS : " << hyper_optimized_approach(arr) << endl;

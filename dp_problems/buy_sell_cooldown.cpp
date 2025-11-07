@@ -61,6 +61,7 @@ int hyper_optimized_approach(vector<int> &prices){    // convert s1 -> s2
     return dp[0][1];
 }
 
+// PROMPT: "Given an array of stock prices where you can buy and sell multiple times but must wait one day after selling before buying again (cooldown period), implement a space-optimized dynamic programming approach to find the maximum profit."
 int main(){
     int n = 5;
     vector<int> stocks = {1,2,3,0,2};

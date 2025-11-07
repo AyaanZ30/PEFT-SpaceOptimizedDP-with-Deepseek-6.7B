@@ -54,7 +54,7 @@ int hyper_optimized_approach(vector<string> &arr){
     return maxi;
 }
 
-
+// PROMPT: Given a list of strings where each string can be formed by adding one character to another string in the list, implement a space-optimized dynamic programming approach to find the length of the longest possible string chain.
 int main() {
     vector<string> arr = {"abc", "def", "ghi", "ab", "cdef", "gh"}; 
 

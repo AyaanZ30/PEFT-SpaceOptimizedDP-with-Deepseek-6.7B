@@ -83,6 +83,8 @@ void printArray(const vector<int> &arr){
     }
     cout << endl;
 }
+
+// PROMPT: Given an integer array arr, implement a space-optimized dynamic programming approach to find the length of the longest strictly increasing subsequence.
 int main() {
     vector<int> arr = {10, 9, 2, 5, 3, 7, 101, 18};
 

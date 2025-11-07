@@ -63,6 +63,8 @@ void printArray(const vector<char> &arr){
     }
     cout << endl;
 }
+
+// PROMPT: Given a string s, implement a space-optimized dynamic programming approach to find the minimum number of cuts needed to partition s into substrings such that each substring is a palindrome.
 int main(){
     string s = "papdollbob";
 

@@ -112,6 +112,7 @@ int tabulation_approach(string &s1, string &s2, vector<vector<int>> &dp){
 //     return s1.size() - LPS(s1);         // max-insertions (reversing entire string and appending to og string - longest palindromic subsequence in the string)
 // }
 
+// PROMPT: Given two strings s1 and s2, implement a space-optimized dynamic programming approach to find the minimum number of operations required to convert s1 into s2. You can insert, delete, or replace characters.
 int main(){
     string s1 = "hot";
     string s2 = "how";

@@ -86,6 +86,8 @@ void printArray(const vector<char> &arr){
     }
     cout << endl;
 }
+
+
 int main(){
     int n = 5;
     vector<char> arr = {'T', '|', 'F', '&', 'T'};

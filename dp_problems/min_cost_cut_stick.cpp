@@ -53,6 +53,8 @@ void printArray(const vector<int> &arr){
     }
     cout << endl;
 }
+
+// PROMPT: You are given the length of a stick and a list of positions where cuts must be made. Implement a space-optimized dynamic programming approach to find the minimum total cost to cut the stick into the given segments.
 int main() {
     int l = 9;  
     vector<int> arr = {5, 6, 1, 4, 2}; 

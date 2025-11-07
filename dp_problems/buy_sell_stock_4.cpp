@@ -63,6 +63,7 @@ int hyper_optimized_approach(vector<int> &prices, int k){    // convert s1 -> s2
     return after[0];
 }
 
+// PROMPT: You are given at most k transactions and an array of prices. Implement a space-optimized dynamic programming solution to find the maximum achievable profit with at most k buy-sell operations.
 int main(){
     int n = 6;
     int transaction_cap = 2;

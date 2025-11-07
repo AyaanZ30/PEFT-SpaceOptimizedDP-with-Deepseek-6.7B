@@ -118,6 +118,8 @@ int LPS(string &s1){
     // return recursion_approach(s1.size() - 1, s2.size() - 1, s1, s2);
     // return hyper_optimized_approach(s1);   // string reversed in the function itself
 }
+
+// PROMPT: Given a string s, implement a space-optimized dynamic programming approach to find the length of the longest palindromic subsequence in s.
 int main(){
     string s1 = "racecar";
     

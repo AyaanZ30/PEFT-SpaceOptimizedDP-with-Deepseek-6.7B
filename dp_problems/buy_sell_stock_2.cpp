@@ -67,6 +67,7 @@ int hyper_optimized_approach(vector<int> &prices){    // convert s1 -> s2
     return ahead[1];
 }
 
+// PROMPT: You are allowed to complete as many transactions as you like, but you must sell the stock before you buy again. Implement a space-optimized dynamic programming solution to maximize the total profit.
 int main(){
     int n = 6;
     vector<int> stocks = {7,1,5,3,6,4};

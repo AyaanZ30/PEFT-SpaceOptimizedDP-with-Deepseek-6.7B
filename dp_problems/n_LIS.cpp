@@ -46,6 +46,8 @@ void printArray(const vector<int> &arr){
     }
     cout << endl;
 }
+
+// PROMPT: "Given an integer array arr, implement a space-optimized dynamic programming approach to count the total number of longest increasing subsequences possible in the array."
 int main() {
     vector<int> arr = {1, 3, 5, 4, 7};   
 

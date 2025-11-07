@@ -51,6 +51,8 @@ void printArray(const vector<int> &arr){
     }
     cout << endl;
 }
+
+// PROMPT: Given an integer array arr, implement a space-optimized dynamic programming approach to find the length of the longest bitonic subsequence. A bitonic subsequence first increases and then decreases.
 int main(){
     vector<int> arr = {1, 11, 2, 10, 4, 5, 2, 1}; // Example input
     cout << "Length of LBS : " << hyper_optimized_approach(arr) << endl;

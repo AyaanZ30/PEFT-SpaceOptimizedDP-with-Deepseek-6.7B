@@ -36,14 +36,10 @@ int hyper_optimized_approach(vector<int>& prices) {
     int n = prices.size();
     vector<int> prev(n + 1, 0);
 
-    // Base case: maximum price for a rod of length 'i' using only pieces of length 1.
     for (int i = 0; i <= n; i++) {
         prev[i] = i * prices[0];
     }
-
-    // Iterate through all possible piece lengths (2 to n).
     for (int idx = 1; idx < n; idx++) {
-        // Iterate through all possible rod lengths.
         for (int N = 0; N <= n; N++) {
             int notTake = prev[N];
             int take = INT_MIN;

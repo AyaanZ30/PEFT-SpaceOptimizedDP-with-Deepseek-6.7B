@@ -30,7 +30,6 @@ int hyper_optimized_approach(vector<int> &arr, int target){
     int n = arr.size();
     vector<bool> prev(target + 1, false);
     
-    // base cases
     prev[0] = true;
     if(arr[0] <= target){
         prev[arr[0]] = true;

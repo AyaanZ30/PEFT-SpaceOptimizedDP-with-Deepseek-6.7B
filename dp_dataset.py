@@ -142,5 +142,5 @@ if __name__ == "__main__":
     create_dp_datasets(
         code_folder="dp_problems",
         full_dataset_file="dp_dataset.json",
-        finetuning_file="finetuning_data.jsonl"
+        finetuning_file="FT_data.jsonl"
     )

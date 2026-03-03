@@ -59,7 +59,7 @@ int tabulation_approach(string &s1, string &s2){
 // OPTIMIZED 
 // @explanation: Space-optimized 1D DP 
 // @complexity: Time: O(n * m) , Space:  O(m)
-int hyper_optimized_approach(string &s1, string &s2){    // convert s1 -> s2 
+int hyper_optimized_approach(string &s1, string &s2){   
     int n = s1.size();
     int m = s2.size();
     vector<int> prev(m+1, 0), curr(m+1, 0);

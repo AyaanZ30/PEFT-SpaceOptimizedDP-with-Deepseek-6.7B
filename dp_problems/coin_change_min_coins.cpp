@@ -35,18 +35,13 @@ int recursion_approach(int idx, int amount, vector<int>& coins) {
 int hyper_optimized_approach(vector<int>& coins, int n, int amount) {
     vector<int> prev(amount + 1, 1e9);
 
-    // Base case: 0 coins are needed for amount 0.
     prev[0] = 0;
     
-    // Initialize for the first coin.
     for(int T=0; T<=amount; T++){
         if(T % coins[0] == 0)
             prev[T] = T / coins[0];
     }
-
-    // Iterate through the rest of the coins.
     for (int idx = 1; idx < n; idx++) {
-        // Iterate through all amounts.
         for (int T = 0; T <= amount; T++) {
             int notTake = prev[T];
             int take = 1e9;
@@ -56,9 +51,8 @@ int hyper_optimized_approach(vector<int>& coins, int n, int amount) {
             prev[T] = min(take, notTake);
         }
     }
-    
     int result = prev[amount];
-    return (result >= 1e9) ? -1 : result; // Return -1 if not possible.
+    return (result >= 1e9) ? -1 : result; 
 }
 
 // PROMPT: You are given an array of coin denominations and a target amount. Develop a space-optimized dynamic programming algorithm to determine the minimum number of coins required to make up that amount. If it is not possible to form the amount, return -1.

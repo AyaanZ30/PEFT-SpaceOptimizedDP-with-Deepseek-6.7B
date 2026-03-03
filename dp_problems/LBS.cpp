@@ -16,30 +16,25 @@ int hyper_optimized_approach(vector<int> &arr){
     int n = arr.size();
     vector<int> dp_f(n, 1);
     
-    // main logic (figuring out LIS from front traversal)
     for(int cur = 0 ; cur < n ; cur++){
         for(int prev = 0 ; prev < cur ; prev++){
-            if(arr[cur] > arr[prev] && 1 + dp_f[prev] > dp_f[cur]){   // valid increasing
+            if(arr[cur] > arr[prev] && 1 + dp_f[prev] > dp_f[cur]){   
                 dp_f[cur] = 1 + dp_f[prev];
             }
         }
     }
-
     vector<int> dp_b(n, 1);
-    // main logic (figuring out LIS from rear traversal)
     for(int cur = n-1 ; cur >= 0 ; cur--){
         for(int prev = n-1 ; prev > cur ; prev--){
-            if(arr[cur] > arr[prev] && 1 + dp_b[prev] > dp_b[cur]){   // valid increasing
+            if(arr[cur] > arr[prev] && 1 + dp_b[prev] > dp_b[cur]){   
                 dp_b[cur] = 1 + dp_b[prev];
             }
         }
     }
-
     vector<int> bitonic(n, 0);
     int maxi = 1;
     for(int i = 0 ; i < n ; i++){
-        bitonic[i] = (dp_f[i] + dp_b[i] - 1);   // -1 to avoid double counting of peak element
-        maxi = max(maxi, bitonic[i]);
+        bitonic[i] = (dp_f[i] + dp_b[i] - 1);   
     }
     return maxi;
 }

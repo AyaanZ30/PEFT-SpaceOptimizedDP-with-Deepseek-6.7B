@@ -44,15 +44,13 @@ int recursion_approach(int idx1, int idx2, string &s1, string &s2){
 int hyper_optimized_approach(string &s1){
     string s2 = s1;
     reverse(s2.begin(), s2.end());
-    // int n = s1.size();
-    // int m = s2.size();
-    vector<int> prev(s2.size() + 1, 0), curr(s2.size() + 1, 0);
+    int n = s1.size();
+    int m = s2.size();
+    vector<int> prev(n + 1, 0), curr(m + 1, 0);
 
-    // base cases
     for(int j = 0 ; j <= s2.size() ; j++){
         prev[j] = 0;
     }
-    
     for(int i = 1 ; i <= s1.size() ; i++){
         for(int j = 1 ; j <= s2.size() ; j++){
             if(s1[i-1] == s2[j-1]){

@@ -30,10 +30,9 @@ int hyper_optimized_approach(vector<int> &arr){
     int maxi = 1;
     
     sort(arr.begin(), arr.end());
-    // main logic (hash array to help in printing LIS sequence)
     for(int cur = 0 ; cur < n ; cur++){
         for(int prev = 0 ; prev < cur ; prev++){
-            if(arr[cur] % arr[prev] == 0 && 1 + dp[prev] > dp[cur]){   // valid increasing
+            if(arr[cur] % arr[prev] == 0 && 1 + dp[prev] > dp[cur]){ 
                 dp[cur] = 1 + dp[prev];
             }
         }

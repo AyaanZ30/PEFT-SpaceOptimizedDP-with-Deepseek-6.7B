@@ -75,7 +75,7 @@ bool tabulation_approach(string &s1, string &s2){
 // OPTIMIZED 
 // @explanation: Space-optimized 1D DP 
 // @complexity: Time: O(n * m) , Space:  O(m)
-bool hyper_optimized_approach(string &s1, string &s2){    // convert s1 -> s2 
+bool hyper_optimized_approach(string &s1, string &s2){    
     int m = s2.size();
     int n = s1.size();
     vector<bool> prev(m+1, false), curr(m+1, false);
@@ -85,7 +85,6 @@ bool hyper_optimized_approach(string &s1, string &s2){    // convert s1 -> s2
         prev[j] = false;
     }
     for(int i = 1 ; i <= n ; i++){
-        // for every row 'i' you are assiging value at [0]  (first column : [i][0])
         bool flag = true;
         for(int k = 0 ; k <= i ; k++){
             if(s1[k] != '*'){

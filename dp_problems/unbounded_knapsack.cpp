@@ -31,15 +31,11 @@ int hyper_optimized_approach(vector<int> &weights, vector<int> &values, int maxW
         prev[w] = (int(w / weights[0]) * values[0]);
     }
 
-    // Iterate through the rest of the items.
     for(int idx = 1 ; idx < n ; idx++){
-        // Iterate forwards through the weights.
         for(int w = 0 ; w <= maxWeight ; w++){
             int notTake = 0 + prev[w];
             int take = 0;
             if(weights[idx] <= w){
-                // prev[w - weights[idx]] already contains the optimized value
-                // which might include the current item.
                 take = values[idx] + prev[w - weights[idx]];
             }
             prev[w] = max(take, notTake);

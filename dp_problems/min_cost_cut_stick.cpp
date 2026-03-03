@@ -30,7 +30,6 @@ int hyper_optimized_approach(vector<int> &cuts){
     int n = cuts.size();
     vector<vector<int>> dp(n+2 ,vector<int>(n+2, 0));
 
-    // main logic (always loop in oppposite fashion as compared to recursion as bottom up)
     for(int i = n ; i >= 1 ; i--){
         for(int j = 1 ; j <= n ; j++){
             if(i > j){continue;}

@@ -38,12 +38,11 @@ int hyper_optimized_approach(vector<string> &arr){
     vector<int> dp(n, 1);
     int maxi = 1;
     
-    // main logic (hash array to help in printing LIS sequence)
-    sort(arr.begin(), arr.end(), comp);     // as sequence can start from any element (progressing by 1 character) and not just in chronological order
+    sort(arr.begin(), arr.end(), comp);     
 
     for(int cur = 0 ; cur < n ; cur++){
         for(int prev = 0 ; prev < cur ; prev++){
-            if(checkPossible(arr[cur], arr[prev])){   // valid increasing
+            if(checkPossible(arr[cur], arr[prev])){   
                 if(1 + dp[prev] > dp[cur]){
                     dp[cur] = 1 + dp[prev];
                 }

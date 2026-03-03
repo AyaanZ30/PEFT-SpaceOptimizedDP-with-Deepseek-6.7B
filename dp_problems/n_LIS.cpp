@@ -18,14 +18,13 @@ int hyper_optimized_approach(vector<int> &arr){
     vector<int> count(n, 1);
     int maxi = 1;
     
-    // main logic (hash array to help in printing LIS sequence)
     for(int cur = 0 ; cur < n ; cur++){
         for(int prev = 0 ; prev < cur ; prev++){
-            if(arr[cur] > arr[prev] && 1 + dp[prev] > dp[cur]){   // valid increasing
+            if(arr[cur] > arr[prev] && 1 + dp[prev] > dp[cur]){   
                 dp[cur] = 1 + dp[prev];
-                count[cur] = count[prev];               // inherit count
-            }else if(arr[cur] > arr[prev] && 1 + dp[prev] == dp[cur]){   //(when duplicate value of LIS length found in dp)
-                count[cur] += count[prev];              // add count
+                count[cur] = count[prev];              
+            }else if(arr[cur] > arr[prev] && 1 + dp[prev] == dp[cur]){   
+                count[cur] += count[prev];            
             }
         }
         maxi = max(maxi, dp[cur]);

@@ -29,7 +29,6 @@ bool hyper_optimized_approach(vector<int> &arr) {
     for (int x : arr) {
         total_sum += x;
     }
-    // If total sum is odd, it cannot be partitioned into two equal halves.
     if (total_sum % 2 != 0) {
         return false;
     }

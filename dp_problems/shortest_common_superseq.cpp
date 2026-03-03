@@ -49,16 +49,14 @@ int recursion_approach(int idx1, int idx2, string &s1, string &s2){
 // OPTIMIZED 
 // @explanation: Space-optimized 1D DP 
 // @complexity: Time: O(n1 * n2) , Space:  O(min(n1, n2))
-int hyper_optimized_approach(string &s1, string &s2){    // convert s1 -> s2 
+int hyper_optimized_approach(string &s1, string &s2){   
     int n = s1.size();
     int m = s2.size();
     vector<int> prev(m + 1, 0), curr(m + 1, 0);
 
-    // base cases
     for(int j = 0 ; j <= m ; j++){
         prev[j] = 0;
     }
-    
     for(int i = 1 ; i <= n ; i++){
         for(int j = 1 ; j <= m ; j++){
             if(s1[i-1] == s2[j-1]){
@@ -69,8 +67,7 @@ int hyper_optimized_approach(string &s1, string &s2){    // convert s1 -> s2
         }
         prev = curr;
     }
-    // s1 : brute, s2 : groot => len(scs) = len(s1) + len(s2) - len(lcs(s1, s2)) = 5 + 5 - 2 = 8 (bgruoote) (order maintained)
-    int length_scs = (n + m - prev[m]);    // length(lcs) stored at prev[m] 
+    int length_scs = (n + m - prev[m]);    
     return length_scs;
 }
 

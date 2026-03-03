@@ -48,14 +48,12 @@ int tabulation_approach(const vector<int> &prices, int fee){
 // OPTIMIZED 
 // @explanation: Space-optimized 2D DP 
 // @complexity: Time: O(N) , Space:  O(N*2)
-int hyper_optimized_approach(vector<int> &prices, int fee){    // convert s1 -> s2 
+int hyper_optimized_approach(vector<int> &prices, int fee){   
     int n = prices.size();
     vector<vector<int>> dp(n+2, vector<int>(2, 0));
 
-    // analogous to recursion base cases (idx == n)
     dp[n][0] = dp[n][1] = 0;
     for(int idx = n-1 ; idx >= 0 ; idx--){
-        // buy(1) or not buy(0)
         dp[idx][1] = max(-prices[idx] + dp[idx+1][0], 0 + dp[idx+1][1]);
         dp[idx][0] = max((prices[idx] - fee) + dp[idx+2][1], 0 + dp[idx+1][0]);
     }

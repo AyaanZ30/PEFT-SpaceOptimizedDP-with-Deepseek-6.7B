@@ -31,21 +31,13 @@ int hyper_optimized_approach(vector<int>& nums, int target) {
     int total_sum = 0;
     for(int x : nums) total_sum += x;
 
-    // Conditions for impossibility.
-    // 1. The target sum must be achievable.
-    // 2. (total_sum - target) must be non-negative and even.
     if (total_sum - target < 0 || (total_sum - target) % 2 != 0) {
         return 0;
     }
-
-    // This problem reduces to finding the number of subsets with sum s2,
-    // where s2 = (total_sum - target) / 2.
     int s2 = (total_sum - target) / 2;
     
     vector<int> prev(s2 + 1, 0);
     prev[0] = 1;
-    
-    // This is now the 'Count Subsets with Sum' problem.
     for (int i = 0; i < n; i++) {
         for (int t = s2; t >= nums[i]; t--) {
             prev[t] = prev[t] + prev[t - nums[i]];

@@ -36,10 +36,9 @@ int recursion_approach(int i, int k, const vector<int> &arr){    // front partit
 // (BOTTOM-UP approach) (TC : O(n*k), SC : O(n))
 int hyper_optimized_approach(vector<int> &arr, int k){
     int n = arr.size();
-    vector<int> dp(n + 1, 0);  // dp[i] -> max sum for subarray arr[0...i-1]
+    vector<int> dp(n + 1, 0);  
 
-    dp[n] = 0; // base case
-
+    dp[n] = 0; 
     for(int i = n-1 ; i >= 0 ; i--){
         int maxAns = INT_MIN;
         int maxi = INT_MIN;
@@ -47,7 +46,7 @@ int hyper_optimized_approach(vector<int> &arr, int k){
         for(int j = i ; j < (i + k) && j < n ; j++){
             len++;
             maxi = max(maxi, arr[j]);
-            int sum = (maxi * len) + dp[j + 1]; // dp[j + 1] -> max sum for subarray arr[0...j]
+            int sum = (maxi * len) + dp[j + 1]; 
             maxAns = max(maxAns, sum);
         }
         dp[i] = maxAns;

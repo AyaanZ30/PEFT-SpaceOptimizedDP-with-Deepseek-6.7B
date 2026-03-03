@@ -23,12 +23,11 @@ int hyper_optimized_approach(vector<int> &arr){
             len++;
         }
         else{
-            // find the index of the smallest number >= arr[i]
             int ind = lower_bound(temp.begin(), temp.end(), arr[i]) - temp.begin();
-            temp[ind] = arr[i];   // replace that number with arr[i]
+            temp[ind] = arr[i];  
         }
     }
-    return len;               // length of LIS is size of temp vector
+    return len;       
 }
 
 // PROMPT: Given an integer array arr, implement a space-optimized approach using binary search to find the length of the longest strictly increasing subsequence in O(n log n) time.

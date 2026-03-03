@@ -39,8 +39,7 @@ int hyper_optimized_approach(string &s){
     int n = s.size();
     vector<int> dp(n+1, 0);
 
-    dp[n] = 0;  // base case
-
+    dp[n] = 0;  
     for(int i = n-1 ; i >= 0 ; i--){
         string temp = "";
         int minCost = 1e9;

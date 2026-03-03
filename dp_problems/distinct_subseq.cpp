@@ -72,20 +72,18 @@ int tabulation_approach(string &s1, string &s2){
 // OPTIMIZED 
 // @explanation: Space-optimized 1D DP 
 // @complexity: Time: O(n * m) , Space:  O(m)
-int hyper_optimized_approach(string &s1, string &s2){    // convert s1 -> s2 
+int hyper_optimized_approach(string &s1, string &s2){    
     int n = s1.size();
     int m = s2.size();
     vector<int> prev(m + 1, 0);
 
-    // dp logic -> 1-D array logic
     prev[0] = 1;
-
     for(int i = 0 ; i <= n ; i++){
         for(int j = m ; j >= 1 ; j--){
             if(s1[i-1] == s2[j-1]){
                 prev[j] = prev[j-1] + prev[j];
             }else{
-                continue;    // no change (same value remains)
+                continue;    
             }
         }
     }return prev[m];

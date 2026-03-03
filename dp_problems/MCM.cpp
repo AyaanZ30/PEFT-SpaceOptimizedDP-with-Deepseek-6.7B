@@ -29,9 +29,8 @@ int hyper_optimized_approach(vector<int> &arr, int size){
     int n = arr.size();
     vector<vector<int>> dp(n ,vector<int>(n, 0));
 
-    // main logic
     for(int i = 0 ; i < n ; i++){
-        dp[i][i] = 0;                   // analogous to rec base cases
+        dp[i][i] = 0;                  
     }
     for(int i = n-1 ; i >= 1 ; i--){
         for(int j = i+1 ; j < n ; j++){

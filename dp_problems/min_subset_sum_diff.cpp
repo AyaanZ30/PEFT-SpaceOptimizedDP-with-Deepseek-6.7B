@@ -34,7 +34,6 @@ int hyper_optimized_approach(vector<int>& arr) {
     for (int x : arr) {
         total_sum += x;
     }
-
     int k = total_sum;
     vector<bool> prev(k + 1, false);
     prev[0] = true;
@@ -42,20 +41,15 @@ int hyper_optimized_approach(vector<int>& arr) {
     if (arr[0] <= k) {
         prev[arr[0]] = true;
     }
-
     for (int idx = 1; idx < n; idx++) {
         for (int target = k; target >= arr[idx]; target--) {
             prev[target] = prev[target] || prev[target - arr[idx]];
         }
     }
-
     int min_diff = 1e9;
-    // The possible sums for one subset are marked as 'true' in the prev array.
-    // We only need to check up to total_sum/2.
     for (int s1 = 0; s1 <= total_sum / 2; s1++) {
-        if (prev[s1]) {
-            // s2 = total_sum - s1
-            // diff = abs(s2 - s1) = abs(total_sum - 2*s1)
+        if (prev[s1]) 
+        {
             min_diff = min(min_diff, abs(total_sum - 2 * s1));
         }
     }

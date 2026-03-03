@@ -73,20 +73,19 @@ int tabulation_approach(const vector<int> &prices, int capacity){
 // OPTIMIZED 
 // @explanation: Space-optimized (3D -> 2D)  
 // @complexity: Time: O(N*2*3) , Space:  O(const)
-int hyper_optimized_approach(vector<int> &prices, int capacity){    // convert s1 -> s2 
+int hyper_optimized_approach(vector<int> &prices, int capacity){   
     int n = prices.size();
     int buy_options = 2;      
 
     vector<vector<int>> after(buy_options, vector<int>(3, 0));
     vector<vector<int>> curr(buy_options, vector<int>(3, 0));
 
-    // core logic
     for(int idx = n-1 ; idx >= 0 ; idx--){
         for(int buy = 0 ; buy < buy_options ; buy++){
             for(int cap = 1 ; cap <= capacity ; cap++){
                 if(buy){
-                    int ahead_sell = after[0][cap];   // if decided to buy
-                    int ahead_buy = after[1][cap];    // if decided to not buy (and look ahead)
+                    int ahead_sell = after[0][cap];  
+                    int ahead_buy = after[1][cap];    
                     curr[buy][cap] = max(-prices[idx] + ahead_sell, 0 + ahead_buy);
                 }else{
                     int ahead_can_buy = after[1][cap-1];

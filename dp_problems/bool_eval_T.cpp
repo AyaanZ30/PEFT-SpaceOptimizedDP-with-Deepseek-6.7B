@@ -46,12 +46,10 @@ int hyper_optimized_approach(vector<char> &arr){
     int n = arr.size();
     vector<vector<vector<int>>> dp(n, vector<vector<int>>(n, vector<int>(2, 0)));
 
-    // base cases analogy (check recursion)
     for(int i = 0 ; i < n ; i += 2){
         dp[i][i][1] = (arr[i] == 'T') ? 1 : 0;
         dp[i][i][0] = (arr[i] == 'F') ? 1 : 0;
     }
-    // main logic (always loop in oppposite fashion as compared to recursion as bottom up)
     for(int i = n - 1 ; i >= 0 ; i -= 2){       // i moves only on operands
         for(int j = i + 2 ; j < n ; j += 2){   // j moves only on operands
             for(int isTrue = 0 ; isTrue <= 1 ; isTrue++){
